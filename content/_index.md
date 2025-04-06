@@ -8,7 +8,7 @@ sections:
   - block: hero
     content:
       title: |
-        南京理工大学
+        南京理工大学 \
         智能媒体分析实验室
       image:
         filename: welcome.jpg
