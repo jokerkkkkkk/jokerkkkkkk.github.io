@@ -15,6 +15,18 @@ main:
   - name: 出版
     url: publication
     weight: 50
+  - name: 获奖
+    url: competitions
+    weight: 60
+  - name: 经费
+    url: grants
+    weight: 70
+  - name: 专利
+    url: patents
+    weight: 80
+  - name: 荣誉
+    url: honor
+    weight: 90
   - name: 联系
     url: contact
-    weight: 60
+    weight: 100

@@ -1,0 +1,18 @@
+.imag-page {
+  max-width: 1260px;
+  margin: 0 auto;
+
+  .imag-page-header {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.imag-page-content {
+  .award-image {
+    width: 100px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}

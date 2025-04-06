@@ -1,0 +1,12 @@
+<link rel="stylesheet" href={{ "lib/glightbox.min.css" | relURL }} />
+
+<script type="text/javascript" src={{ "lib/glightbox.min.js" | relURL }}></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true
+    });
+  });
+</script>
