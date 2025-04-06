@@ -1,5 +1,5 @@
 ---
-title: 理查德-亨德里克斯获得哇塞奖第一名
+title: Richard Hendricks Wins First Place in the Wowchemy Prize
 date: 2020-12-01
 ---
 

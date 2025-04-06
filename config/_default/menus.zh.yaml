@@ -1,0 +1,20 @@
+
+main:
+  - name: 导览
+    url: tour
+    weight: 10
+  - name: 新闻
+    url: post
+    weight: 20
+  - name: 成员
+    url: people
+    weight: 30
+  - name: 会议
+    url: event
+    weight: 40
+  - name: 出版
+    url: publication
+    weight: 50
+  - name: 联系
+    url: contact
+    weight: 60

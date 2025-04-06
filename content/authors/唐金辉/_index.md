@@ -1,30 +1,30 @@
 ---
 # Display name
-title: Alice Wu 吳恩達
+title: 唐金辉
 
 # Full name (for SEO)
-first_name: Alice
-last_name: Wu
+first_name: 金辉
+last_name: 唐
 
-index: 200
+index: 100
 
 # Username (this should match the folder name)
 authors:
-  - 吳恩達
+  - 唐金辉
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: 南京理工大学计算机科学与工程学院院长
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
+  - name: 南京理工大学
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: 唐金辉，教授，南京理工大学计算机科学与工程学院院长。从事多媒体分析和计算机视觉的研究，发表ACM/IEEE汇刊论文和A类会议长文150余篇，被引用17,000余次，H-index为69，获著名国际会议最佳（学生）论文奖8次；主持新一代人工智能重大项目课题、青年973项目、基金重点项目等；曾获国家自然科学二等奖1次、省部级一等奖3次、教育部自然科学二等奖2次；曾担任IEEE TKDE、TNNLS、TMM、TCSVT等多个期刊编委。
 
 interests:
   - Artificial Intelligence

@@ -8,18 +8,18 @@ sections:
   - block: hero
     content:
       title: |
-        南京理工大学
-        智能媒体分析实验室
+        Wowchemy
+        Research Group
       image:
         filename: welcome.jpg
       text: |
         <br>
-
-        The **智能媒体分析实验室 Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
-
+        
+        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+  
   - block: collection
     content:
-      title: 最近新闻
+      title: Latest News
       subtitle:
       text:
       count: 5
@@ -35,7 +35,7 @@ sections:
     design:
       view: card
       columns: '1'
-
+  
   - block: markdown
     content:
       title:
@@ -44,7 +44,7 @@ sections:
     design:
       columns: '1'
       background:
-        image:
+        image: 
           filename: coders.jpg
           filters:
             brightness: 1
@@ -58,7 +58,7 @@ sections:
 
   - block: collection
     content:
-      title: 最新出版
+      title: Latest Preprints
       text: ""
       count: 5
       filters:
@@ -74,7 +74,7 @@ sections:
       title:
       subtitle:
       text: |
-        {{% cta cta_link="./people/" cta_text="团队成员 →" %}}
+        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
     design:
       columns: '1'
 ---

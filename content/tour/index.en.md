@@ -8,7 +8,7 @@ sections:
   - block: slider
     content:
       slides:
-      - title: 👋 欢迎来到智能媒体分析实验室
+      - title: 👋 Welcome to the group
         content: Take a look at what we're working on...
         align: center
         background:
@@ -18,7 +18,7 @@ sections:
               brightness: 0.7
           position: right
           color: '#666'
-      - title: 午餐 & 学习 ☕️
+      - title: Lunch & Learn ☕️
         content: 'Share your knowledge with the group and explore exciting new topics together!'
         align: left
         background:
