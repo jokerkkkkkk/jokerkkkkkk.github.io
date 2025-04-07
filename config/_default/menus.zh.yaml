@@ -27,6 +27,9 @@ main:
   - name: 荣誉
     url: honor
     weight: 90
+  - name: 资源
+    url: resource
+    weight: 95
   - name: 联系
     url: contact
     weight: 100

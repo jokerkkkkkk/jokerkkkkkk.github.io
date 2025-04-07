@@ -1,10 +1,10 @@
 ---
 # Display name
-title: 唐金辉
+title: Jinhui Tang
 
 # Full name (for SEO)
-first_name: 金辉
-last_name: 唐
+first_name: Jinhui
+last_name: Tang
 
 index: 100
 
@@ -16,15 +16,15 @@ authors:
 superuser: false
 
 # Role/position
-role: 南京理工大学计算机科学与工程学院院长
+role: Dean of the Institute of Science and Technology
 
 # Organizations/Affiliations
 organizations:
-  - name: 南京理工大学
+  - name: Nanjing University of Science and Technology University
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: 唐金辉，教授，南京理工大学计算机科学与工程学院院长。从事多媒体分析和计算机视觉的研究，发表ACM/IEEE汇刊论文和A类会议长文150余篇，被引用17,000余次，H-index为69，获著名国际会议最佳（学生）论文奖8次；主持新一代人工智能重大项目课题、青年973项目、基金重点项目等；曾获国家自然科学二等奖1次、省部级一等奖3次、教育部自然科学二等奖2次；曾担任IEEE TKDE、TNNLS、TMM、TCSVT等多个期刊编委。
+bio: Jinhui Tang is a second-level Professor at the Nanjing University of Science and Technology University of Computer College and associate Dean of the Institute of Science and Technology. He has long been engaged in research in the field of computer vision and mode recognition. He has received more than 20 national and provincial and ministerial projects, including the National Science Foundation for Outstanding Young People, the National Science Foundation for Outstanding Young People, the National 973 Program Project, the key research and development Project, and the key Project of the National Fund. He was selected as IAPR Fellow, national "Ten Thousand People Program" leading talent in science and technology innovation and top young talent. He has won 1 second prize of National natural science, 4 first prizes of provincial and ministerial level, and 2 second prizes of natural science of Ministry of Education. He has served as the Editorial Board member of IEEE TKDE, TMM, TNNLS and TCSVT. The intelligent media analysis team of Nanjing University of Science and Technology, which he led, is the "Double Innovation Team" in Jiangsu Province, including 5 professors (including 4 national -level talents), 5 associate professors, and more than 100 graduate students, and have deep technical accumulation in visual semantic understanding, object detection identification, semantic segmentation and other directions.
 
 # interests:
 #   - Artificial Intelligence
@@ -77,11 +77,10 @@ user_groups:
   - PhD
   - Master
 
-# 尾部连接标识，如果不使用，默认是姓名
 slug: tangjinhui
 ---
 
-唐金辉，教授，南京理工大学计算机科学与工程学院院长。从事多媒体分析和计算机视觉的研究，发表ACM/IEEE汇刊论文和A类会议长文150余篇，被引用17,000余次，H-index为69，获著名国际会议最佳（学生）论文奖8次；主持新一代人工智能重大项目课题、青年973项目、基金重点项目等；曾获国家自然科学二等奖1次、省部级一等奖3次、教育部自然科学二等奖2次；曾担任IEEE TKDE、TNNLS、TMM、TCSVT等多个期刊编委。 [English Version](/en/author/tangjinhui/)
+Jinhui Tang is a second-level Professor at the Nanjing University of Science and Technology University of Computer College and associate Dean of the Institute of Science and Technology. He has long been engaged in research in the field of computer vision and mode recognition. He has received more than 20 national and provincial and ministerial projects, including the National Science Foundation for Outstanding Young People, the National Science Foundation for Outstanding Young People, the National 973 Program Project, the key research and development Project, and the key Project of the National Fund. He was selected as IAPR Fellow, national "Ten Thousand People Program" leading talent in science and technology innovation and top young talent. He has won 1 second prize of National natural science, 4 first prizes of provincial and ministerial level, and 2 second prizes of natural science of Ministry of Education. He has served as the Editorial Board member of IEEE TKDE, TMM, TNNLS and TCSVT. The intelligent media analysis team of Nanjing University of Science and Technology, which he led, is the "Double Innovation Team" in Jiangsu Province, including 5 professors (including 4 national -level talents), 5 associate professors, and more than 100 graduate students, and have deep technical accumulation in visual semantic understanding, object detection identification, semantic segmentation and other directions. [中文版](/author/tangjinhui/)
 
 
 ## 论文
