@@ -1,7 +1,7 @@
 
 main:
-  - name: 导览
-    url: tour
+  - name: 主页
+    url: /
     weight: 10
   - name: 新闻
     url: post
@@ -24,9 +24,9 @@ main:
   - name: 专利
     url: patents
     weight: 80
-  - name: 荣誉
-    url: honor
-    weight: 90
+  # - name: 荣誉
+  #   url: honor
+  #   weight: 90
   - name: 资源
     url: resource
     weight: 95

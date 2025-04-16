@@ -1,0 +1,258 @@
+
+/* 资源页面样式 */
+/* 资源页面标题左对齐 */
+.resource-page-wrapper {
+  font-size: 16px;
+  background-color: #f8f9fa;
+  color: #333333;
+
+  .resource-page {
+    max-width: 1260px;
+    margin: 0 auto;
+
+    .resource-header {
+      text-align: left;
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+
+      h1 {
+        font-size: 1.875em;
+        font-weight: bold;
+        line-height: 2.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .resource-description-text {
+        font-size: 1.1em;
+        color: #666;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.resource-container {
+  // padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.resource-search {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  /* 搜索框容器 */
+  .search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      padding-left: 3rem; /* 为图标留出空间 */
+      font-size: 1rem;
+      border: 1px solid #e5e7eb;
+      outline: none;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #57247b;
+      }
+    }
+
+    /* 搜索图标样式 */
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      font-size: 1.2rem;
+      color: #999;
+      pointer-events: none; /* 使图标不会阻挡点击 */
+    }
+  }
+}
+
+.resource-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.resource-links {
+  flex: 3;
+  min-width: 600px;
+
+  h2 {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+.resource-datasets {
+  flex: 1;
+  min-width: 250px;
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+}
+
+.links-container {
+  display: grid;
+  /* 固定为每行三个卡片 */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* 在小屏幕上调整为两列 */
+@media (max-width: 1000px) {
+  .links-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resource-links {
+    min-width: 450px;
+  }
+}
+
+/* 在更小的屏幕上调整为一列 */
+@media (max-width: 768px) {
+  .links-container {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-links {
+    min-width: 280px;
+  }
+}
+
+/* 卡片外层链接样式 */
+.link-card-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-3px);
+
+    .link-card {
+      border-color: #57247b;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      .card-content {
+        h3.card-title {
+          color: #57247b;
+        }
+      }
+    }
+  }
+}
+
+.link-card {
+  border: 1px solid #e5e7eb;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* 确保卡片是方角的 */
+  border-radius: 0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  .card-image {
+    height: 160px;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-content {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    h3.card-title {
+      font-size: 0.8rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .card-description {
+      font-size: 0.7rem;
+      margin: 0;
+      flex-grow: 1;
+      line-height: 1.4;
+    }
+  }
+}
+
+/* 数据集列表样式 */
+.datasets-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.dataset-item {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+
+  .dataset-bullet {
+    color: #57247b; /* 小圆点 */
+    font-size: 0.3rem;
+    margin-right: 0.8rem;
+  }
+
+  .dataset-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #57247b;
+      text-decoration: none;
+    }
+  }
+}
+
+/* 资源描述部分 */
+.resource-description {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+/* 对搜索结果的处理 */
+.resource-hidden {
+  display: none !important;
+}

@@ -1,0 +1,43 @@
+{{- define "main" -}}
+
+<article class="patent-page">
+  {{/* <div class="patent-page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}
+    <p class="patent-description-text">{{ . }}</p>
+    {{ end }}
+  </div> */}}
+
+  <div class="patent-container">
+    <!-- 遍历不同类别的知识产权 -->
+    {{ range .Params.intellectual_property }}
+    <div class="category-section">
+      <h2 class="category-title">{{ .category }}</h2>
+
+      <!-- 知识产权卡片瀑布流 -->
+      <div class="patent-grid">
+        {{ range .items }}
+        <a href="{{ .link | default " #" }}" class="patent-card-wrapper" {{ if .link }}target="_blank" {{ end }}>
+          <div class="patent-card">
+            {{ if .image }}
+            <div class="card-image hover-overlay">
+              <img src="{{ .image }}" alt="{{ .title }}" />
+            </div>
+            {{ end }}
+            <div class="card-content">
+              <h3 class="card-title">{{ .title }}</h3>
+              <p class="card-author">{{ .author }}</p>
+            </div>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- 内容部分 -->
+  <div class="patent-description">{{ .Content }}</div>
+</article>
+
+{{- end -}}
