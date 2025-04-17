@@ -1,5 +1,5 @@
 ---
-title: 知识产权
+title: 科研成果
 layout: custom_patent
 
 # 知识产权信息分类
