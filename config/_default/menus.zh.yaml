@@ -3,25 +3,25 @@ main:
   - name: 主页
     url: /
     weight: 10
-  - name: 新闻
-    url: post
+  - name: 研究成果
+    url: research
     weight: 20
   - name: 成员
     url: people
     weight: 30
-  - name: 会议
-    url: event
-    weight: 40
+  # - name: 会议
+  #   url: event
+  #   weight: 40
   - name: 出版
     url: publication
     weight: 50
   - name: 获奖
     url: competitions
     weight: 60
-  - name: 经费
-    url: grants
-    weight: 70
-  - name: 专利
+  # - name: 经费
+  #   url: grants
+  #   weight: 70
+  - name: 科研成果
     url: patents
     weight: 80
   # - name: 荣誉
