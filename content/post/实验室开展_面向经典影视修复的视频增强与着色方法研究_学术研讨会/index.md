@@ -1,6 +1,6 @@
 ---
 title: 实验室开展"面向经典影视修复的视频增强与着色方法研究"学术研讨会
-date: 
+date: 2022-11-01
 draft: false
 authors:
   - 杜晓宇
