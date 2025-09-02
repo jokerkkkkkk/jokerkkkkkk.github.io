@@ -1,0 +1,128 @@
+{{/* 自定义双栏集合展示模板 */}}
+{{/* 基于 Hugo Blox Builder 的集合模板修改 */}}
+
+{{/* 初始化 */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{/* 获取左侧内容 - 新闻 */}}
+{{ $items_count_left := $block.content.count_left | default 5 }}
+{{ $offset_left := $block.content.offset_left | default 0 }}
+
+{{/* 左侧查询 - 新闻 */}}
+{{ $query_left := where site.RegularPages "Type" "post" }}
+{{ if $block.content.filters_left.folders }}
+{{ $folders := $block.content.filters_left.folders }}
+{{ $query_left = where site.RegularPages "Section" "in" $folders }}
+{{ end }}
+
+{{/* 排序左侧内容 */}}
+{{ $sort_by_left := $block.content.sort_by_left | default "Date" }}
+{{ $sort_by_left = partial "blox-core/functions/get_sort_by_parameter" $sort_by_left }}
+{{ $sort_ascending_left := $block.content.sort_ascending_left | default false }}
+{{ $sort_order_left := cond $sort_ascending_left "asc" "desc" }}
+{{ $query_left = sort $query_left $sort_by_left $sort_order_left }}
+
+{{/* 应用偏移和限制 - 左侧 */}}
+{{ if gt $offset_left 0 }}
+{{ $query_left = first $items_count_left (after $offset_left $query_left) }}
+{{ else }}
+{{ $query_left = first $items_count_left $query_left }}
+{{ end }}
+
+{{/* 获取右侧内容 - 论文 */}}
+{{ $items_count_right := $block.content.count_right | default 5 }}
+{{ $offset_right := $block.content.offset_right | default 0 }}
+
+{{/* 右侧查询 - 论文 */}}
+{{ $query_right := where site.RegularPages "Type" "publication" }}
+{{ if $block.content.filters_right.folders }}
+{{ $folders := $block.content.filters_right.folders }}
+{{ $query_right = where site.RegularPages "Section" "in" $folders }}
+{{ end }}
+
+{{/* 排序右侧内容 */}}
+{{ $sort_by_right := $block.content.sort_by_right | default "Date" }}
+{{ $sort_by_right = partial "blox-core/functions/get_sort_by_parameter" $sort_by_right }}
+{{ $sort_ascending_right := $block.content.sort_ascending_right | default false }}
+{{ $sort_order_right := cond $sort_ascending_right "asc" "desc" }}
+{{ $query_right = sort $query_right $sort_by_right $sort_order_right }}
+
+{{/* 应用偏移和限制 - 右侧 */}}
+{{ if gt $offset_right 0 }}
+{{ $query_right = first $items_count_right (after $offset_right $query_right) }}
+{{ else }}
+{{ $query_right = first $items_count_right $query_right }}
+{{ end }}
+
+{{/* 获取存档页面 */}}
+{{ $left_archive_page := site.GetPage "Section" "post" }}
+{{ $right_archive_page := site.GetPage "Section" "publication" }}
+
+<div class="custom-collection-section">
+  <div class="row">
+    <div class="col-12">
+      {{ with $block.content.text }}{{ . | emojify | $page.RenderString }}{{ end }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="dual-column-container">
+        <div class="row">
+          <!-- 左侧 - 新闻 -->
+          <div class="col-md-5 news-column">
+            <div class="column-content">
+              <h3 class="column-title">{{ $block.content.title_left | default "新闻" }}</h3>
+              <div class="item-list">
+                {{ range $query_left }}
+                <div class="list-item">
+                  <a href="{{ .RelPermalink }}" class="item-link">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="item-title">{{ .Title }}</div>
+                      <div class="item-date">{{ .Date.Format "2006-01-02" }}</div>
+                    </div>
+                  </a>
+                </div>
+                {{ end }}
+              </div>
+              {{ if $left_archive_page }}
+              <div class="more-button-container">
+                <a class="more-button" href="{{ $left_archive_page.RelPermalink }}">
+                  <i class="fas fa-plus"></i> {{ $block.content.more_text_left | default "更多" }}
+                </a>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+
+          <!-- 右侧 - 论文 -->
+          <div class="col-md-7 publication-column">
+            <div class="column-content">
+              <h3 class="column-title">{{ $block.content.title_right | default "论文" }}</h3>
+              <div class="item-list">
+                {{ range $query_right }}
+                <div class="list-item">
+                  <a href="{{ .RelPermalink }}" class="item-link">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="item-title">{{ .Title }}</div>
+                      <div class="item-date">{{ .Date.Format "2006-01-02" }}</div>
+                    </div>
+                  </a>
+                </div>
+                {{ end }}
+              </div>
+              {{ if $right_archive_page }}
+              <div class="more-button-container">
+                <a class="more-button" href="{{ $right_archive_page.RelPermalink }}">
+                  <i class="fas fa-plus"></i> {{ $block.content.more_text_right | default "更多" }}
+                </a>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

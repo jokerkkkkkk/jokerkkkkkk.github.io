@@ -1,0 +1,93 @@
+
+/* 自定义集合区块样式 */
+.wg-custom-collection {
+  background-color: #f7f7f7;
+}
+
+.custom-collection-section {
+  font-size: 0.9rem;
+}
+
+.dual-column-container {
+  width: 100%;
+}
+
+.column-content {
+  height: 100%;
+}
+
+.column-title {
+  color: #57247b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.item-list {
+  margin-bottom: 15px;
+}
+
+.list-item {
+  background-color: #ffffff;
+  margin-bottom: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.item-link {
+  display: block;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.item-link:hover {
+  text-decoration: none;
+}
+
+.list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.item-title {
+  max-width: 75%;
+  color: #333;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-item:hover .item-title {
+  color: #57247b;
+}
+
+.item-date {
+  color: #666;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.more-button-container {
+  margin-top: 15px;
+}
+
+.more-button {
+  display: inline-block;
+  padding: 6px 20px;
+  background-color: #57247b;
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.more-button:hover {
+  background-color: #451b62;
+  color: #fff;
+  text-decoration: none;
+}

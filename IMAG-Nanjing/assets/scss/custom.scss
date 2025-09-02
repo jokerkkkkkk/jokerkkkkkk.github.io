@@ -1,0 +1,39 @@
+.imag-page {
+  max-width: 1260px;
+  margin: 0 auto;
+
+  .imag-page-header {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.imag-page-content {
+  .award-image {
+    width: 100px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+/* 导航栏 自定义颜色 */
+// .navbar {
+//   background: #57247b;
+// }
+
+// .navbar-light .navbar-brand {
+//   color: #fff;
+// }
+
+// #navbar-main .main-menu-item ul li .nav-link {
+//   color: #fff;
+// }
+
+// .navbar .navbar-nav .nav-link {
+//   color: #fff;
+// }
+
+@import "custom_home.scss";
+@import "custom_resource.scss";
+@import "custom_patent.scss";

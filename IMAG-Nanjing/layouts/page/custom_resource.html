@@ -1,0 +1,68 @@
+{{- define "main" -}}
+
+<div class="resource-page-wrapper">
+  <article class="resource-page">
+    <div class="resource-page-header resource-header">
+      <h1>{{ .Title }}</h1>
+      <p class="resource-description-text">{{ .Params.description }}</p>
+    </div>
+
+    <div class="resource-container">
+      <!-- 搜索栏 -->
+      <div class="resource-search">
+        <div class="search-input-container">
+          <i class="fas fa-search search-icon" aria-hidden="true"></i>
+          <input type="text" id="resource-search-input" placeholder="搜索数据集和资源链接..." />
+        </div>
+      </div>
+
+      <div class="resource-content">
+        <!-- Links 区域 -->
+        <div class="resource-links">
+          <h2>Links</h2>
+          <div class="links-container" id="links-container">
+            <!-- 直接从front matter中读取Links数据 -->
+            {{ range .Params.links }}
+            <a href="{{ .url }}" target="_blank" class="link-card-wrapper">
+              <div class="link-card" data-title="{{ .title | lower }}">
+                <div class="card-image">
+                  <img src="{{ .image }}" alt="{{ .title }}" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">{{ .title }}</h3>
+                  <p class="card-description">{{ .description }}</p>
+                </div>
+              </div>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+
+        <!-- Datasets 区域 - 修改为列表形式 -->
+        <div class="resource-datasets">
+          <h2>Datasets</h2>
+          <ul class="datasets-list" id="datasets-container">
+            <!-- 直接从front matter中读取Datasets数据 -->
+            {{ range .Params.datasets }}
+            <li class="dataset-item">
+              <i class="fas fa-circle dataset-bullet"></i>
+              <a href="{{ .url }}" target="_blank" class="dataset-link" data-title="{{ .title | lower }}">
+                {{ .title }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 内容部分 -->
+    <div class="resource-description">{{ .Content }}</div>
+  </article>
+</div>
+
+<!-- 添加资源页面的JavaScript -->
+{{ $js := resources.Get "js/resource.js" | js.Build }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+{{- end -}}
